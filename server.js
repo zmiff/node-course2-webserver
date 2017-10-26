@@ -34,6 +34,13 @@ hbs.registerHelper('screamIt',(text)=>{
   return text.toUpperCase();
 })
 
+app.get('/', (req, res)=>{
+  res.render('home.hbs', {
+    pageTitle: 'Home Page',
+    welcome: 'Welcome to my website'
+  })
+})
+
 app.get('/about', (req, res)=>{
   //res.send('<h1>About Page</h1>'); //localhost:3000/about
   res.render('about.hbs', {
@@ -44,7 +51,7 @@ app.get('/about', (req, res)=>{
 app.get('/home', (reg, res)=>{
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    welcome: 'Welcome to some website, have funlooking around, this string is injected via express.hbs npm, these libraries can be found at epressjs.com and npm.js'
+    welcome: 'Welcome to some website'
   })
 })
 
