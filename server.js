@@ -34,21 +34,6 @@ hbs.registerHelper('screamIt',(text)=>{
   return text.toUpperCase();
 })
 
-app.get('/', (req, res)=>{
-  // res.send('<h1>Hello Express!.</h1>');
-  res.send({
-    name : 'Ugur Tamer',
-    age : 33,
-    favFood : 'manti',
-    numKids : 2,
-    likes : [
-      'Biking',
-      'Fitness',
-      'NodeJs'
-    ]
-  })
-})
-
 app.get('/about', (req, res)=>{
   //res.send('<h1>About Page</h1>'); //localhost:3000/about
   res.render('about.hbs', {
