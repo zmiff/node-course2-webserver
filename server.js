@@ -55,6 +55,13 @@ app.get('/home', (reg, res)=>{
   })
 })
 
+app.get('/projects', (req, res)=>{
+  res.render('projects.hbs', {
+    pageTitle: 'portfolio',
+    portfolioMessage : "Welcometo my portfolio, here you can see my projects"
+  })
+})
+
 //challenge route /bad with an errorMessage
 app.get('/bad', (req, res)=>{
   res.send({
